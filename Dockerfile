@@ -2,7 +2,7 @@
 FROM continuumio/miniconda3
 
 # Install all necessary libraries
-RUN apt-get update && apt-get -y install build-essential musl-dev libjpeg-dev zlib1g-dev libgl1-mesa-dev wget dpkg
+RUN apt-get update && apt-get -y install build-essential musl-dev libjpeg-dev zlib1g-dev libgl1-mesa-dev wget dpkg libsctp-dev lksctp-tools
 
 # Copy all the files in the current directory to /tmp/ml in our Docker image
 COPY . /tmp/ml
